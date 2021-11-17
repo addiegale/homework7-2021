@@ -55,7 +55,7 @@ document.querySelector("#slider").addEventListener("click", function() {
 	var percentage = document.querySelector("#slider").value;
 	video.volume = percentage/100;
 	volume.innerHTML = (percentage + "%");
-	console.log("Volume: " + video.volume);
+	console.log(video.volume);
 });
 
 document.querySelector("#orig").addEventListener("click", function() {
