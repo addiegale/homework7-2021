@@ -58,4 +58,15 @@ document.querySelector("#slider").addEventListener("click", function() {
 	console.log("Volume: " + video.volume);
 });
 
+document.querySelector("#orig").addEventListener("click", function() {
+	video.classList.remove("oldSchool");
+	console.log("Original filter");
+});
+
+
+document.querySelector("#vintage").addEventListener("click", function() {
+	video.classList.add("oldSchool");
+	console.log("Old school filter");
+});
+
 
