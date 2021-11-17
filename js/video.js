@@ -26,3 +26,36 @@ document.querySelector("#faster").addEventListener("click", function() {
 	video.playbackRate = video.playbackRate / .95;
 	console.log("Speed: " + video.playbackRate)
 });
+
+document.querySelector("#skip").addEventListener("click", function() {
+	console.log("Current time: " + video.currentTime);
+
+	if (video.currentTime < video.duration - 15){
+		video.currentTime += 15
+	}
+	else{
+		video.currentTime = 0;
+		console.log("Start over")
+	}
+	console.log("Current time: "+ video.currentTime)
+});
+
+document.querySelector("#mute").addEventListener("click", function() {
+	if (video.muted == false){
+		video.muted = true;
+		document.querySelector("#mute").innerHTML = "Unmute";
+	}
+	else{
+		video.muted = false;
+		document.querySelector("#mute").innerHTML = "Mute";
+	}
+});
+
+document.querySelector("#slider").addEventListener("click", function() {
+	var percentage = document.querySelector("#slider").value;
+	video.volume = percentage/100;
+	volume.innerHTML = (percentage + "%");
+	console.log("Volume: " + video.volume);
+});
+
+
